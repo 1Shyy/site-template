@@ -1,0 +1,171 @@
+.wrap
+    width: 90%
+    margin-left: 20px
+    text-align: center
+    &-head
+        margin-top: 72px
+        display: flex
+        justify-content: space-between
+        width: 75%
+        margin-left: auto
+        margin-right: auto
+    &-text
+        +bold
+        color: white
+        font-size: 32px
+        text-align: left
+        font-weight: 700
+    &-videoplay
+        padding-top: 25px
+    &-container
+        width: 85%
+        margin-right: auto
+        margin-left: auto
+        display: flex
+        justify-content: space-between
+    &-block1
+        &-upper
+            width: 491px
+            height: 500px
+            background-image: url('../img/block2.png')
+            background-repeat: no-repeat
+            background-size: contain
+        &-circle
+            background-color: #7F8589
+            float: right
+            height: 72px
+            width: 72px
+            border: 1px solid
+            border-radius: 50%
+            border-color: #7F8589
+            opacity: 0.4
+            margin-top: 15px
+            &-in
+                background-color: #FF3E41
+                height: 8px
+                width: 8px
+                border: 1px solid
+                border-radius: 50%
+                margin-left: 32px
+                margin-top: 32px
+        &-button
+            margin-left: -20px
+            padding-top: 170px
+            display: flex
+            justify-content: space-between
+            width: 300px
+            height: 72px
+        &-bottom
+            width: 67px
+            height: 27px
+            margin-left: 90px
+            margin-top: 30px
+            border-bottom: 1px solid
+            border-color: #CBCECF
+        &-bottom a
+            +bold
+            font-size: 16px
+            color: #CBCECF
+            text-decoration: none
+    &-block2
+        margin-left: -50px
+        margin-top: -100px
+    
+    &-block3
+        &-upper
+            +bold
+            font-size: 72px
+            color: white
+            line-height: 90px
+            text-align: right
+        &-hlines:before
+            content: " "
+            display: block
+            height: 2px
+            width: 80px
+            position: absolute
+            top: 50%
+            left: 0
+            background: #CBCECF
+            margin-left: 30px
+        &-hlines
+            position: relative
+            text-align: center
+            font-size: 16px
+            color: #CBCECF
+            text-align: right
+            margin-top: -20px
+        &-bottom
+            float: right
+            width: 115px
+            height: 105px
+            margin-top: 110px
+            &-log1
+                width: 65px
+                height: 64px
+                margin-left: auto
+                margin-right: auto
+                background: url('../img/log1.svg') center
+            &-log2
+                width: 65px
+                height: 64px
+                background: url('../img/log2.svg') no-repeat
+                background-position: 40% 50%
+            &-log3
+                &-log1
+                width: 65px
+                height: 64px
+                background: url('../img/log3.svg') no-repeat
+                background-position: 78% 50%
+            &-text1
+                +bold
+                font-size: 18px
+                color: #CBCECF
+                padding-top: 5px
+            &-text2
+                +bold
+                font-size: 12px
+                color: #CBCECF
+.social
+    position: fixed
+    height: 240px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    right: 27px
+    &-but
+        width: 48px
+        height: 48px
+        border-radius: 50%
+        background-color: #313538
+    &-tele
+        background: url('../img/telegram.svg') center no-repeat
+        background-color: #313538
+    &-whatsup
+        background: url('../img/whatsup1.svg') center no-repeat
+        background-color: #313538
+        &-second
+            background: url('../img/whatsup2.svg') center no-repeat
+
+    &-email
+        background: url('../img/email.svg') center no-repeat
+        background-color: #313538
+    &-mail
+        background: url('../img/mail.svg') center no-repeat
+        background-color: #313538
+.pagination
+    position: fixed
+    left: -70px
+    transform: rotate(-90deg)
+    display: flex
+    justify-content: space-between
+    width: 252px
+.page a
+    +bold
+    font-size: 13px
+    color: #7F8589
+    text-decoration: none
+.page-current a
+    color: #FF3E41
+
+        

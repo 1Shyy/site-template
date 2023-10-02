@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'HelveticaNeueCyr';
+    src: url('../fonts/HelveticaNeueCyr-Thin.eot');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+@mixin bold {
+    font-family: 'HelveticaNeueCyr', sans-serif;
+}  
