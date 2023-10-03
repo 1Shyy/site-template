@@ -1,0 +1,177 @@
+.infocenter
+    margin-top: 128px
+    width: 100%
+    background-color: white
+    padding-bottom: 104px
+    &-header
+        padding-top: 96px
+        font-size: 40px
+        font-weight: 700
+        color: #1B1F22
+    &-tail
+        width: 156px
+        margin: 48px auto 0
+        border-bottom: 2px solid #1B1F22
+    &-tail a
+        text-decoration: none
+        font-size: 16px
+        font-weight: 550
+        color: #1B1F22
+        
+
+    
+.container
+    max-width: 1314
+    margin-top: 80px
+
+
+.info-slider 
+    position: relative
+    max-width: 1313px
+    margin: 0 auto
+
+
+.info-slider-wrapper 
+    overflow: hidden
+
+
+.info-slider-items 
+    display: flex
+    justify-content: space-between
+    transition: transform 0.5s ease
+    will-change: transform
+    counter-reset: slide
+    --gap: 29px
+    gap: var(--gap)
+
+
+.info-slider-transition-none 
+    transition: none
+
+
+.info-slider-item 
+    max-width: 100%
+    user-select: none
+    will-change: transform
+    flex: 0 0 auto
+    width: 418px
+    counter-increment: slide
+    height: 538px
+    position: relative
+    border-radius: 28px
+    background-color: #F5F5F5
+    &-img1
+        width: 100%
+        height: 54%
+        background: url('../img/infocenter/infocenter-1.png')
+    &-img2
+        width: 100%
+        height: 54%
+        background: url('../img/infocenter/infocenter-2.png')
+    &-img3
+        width: 100%
+        height: 54%
+        background: url('../img/infocenter/infocenter-3.png')
+    &-main
+        width: 358px
+        margin: 32px auto 0
+        text-align: left
+        &-header
+            font-size: 14px
+            font-weight: 550
+            color: #FF3E41
+        &-bd
+            height: 80px
+            margin-top: 24px
+            max-width: 330px
+            font-size: 20px
+            font-weight: 550
+            color: #1F2120
+        &-tail
+            margin-top: 55px
+            display: flex
+            justify-content: space-between
+            font-size: 14px
+            font-weight: 550
+            color: #7F8589
+            &-arrow
+                width: 28px
+                height: 28px
+                background: url('../img/infocenter/arrow.svg') center no-repeat
+            
+            
+
+
+
+
+@media (min-width: 768px) 
+    .info-slider-item 
+        width: calc(50% - var(--gap) / 2)
+         
+@media (min-width: 992px) 
+    .info-slider-item 
+        width: calc(33.3333333333% - var(--gap) * 2 / 3)
+    
+.info-slider-item::before 
+    position: absolute
+    top: 10px
+    right: 20px
+    display: block
+        
+    
+.info-slider-item:nth-child(4) 
+    background-color: #F5F5F5
+             
+         
+
+
+.info-slider-btn
+    margin: 0 -100px
+    position: absolute
+    top: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 35px
+    height: 65px
+    text-align: center
+    background: transparent no-repeat center center
+    border: none
+    transform: translateY(-50%)
+    cursor: pointer
+
+
+.info-slider-btn-hide 
+  display: none
+
+
+.info-slider-btn-prev
+    left: 0
+
+
+.info-slider-btn-next 
+    right: 0
+
+
+.info-slider-btn:hover,
+.info-slider-btn:focus 
+  text-decoration: none
+  background: rgb(0 0 0 / 30%)
+  outline: 0
+
+
+.info-slider-btn::before 
+  content: ""
+  display: inline-block
+  width: 28px
+  height: 56px
+  background: transparent no-repeat center center
+  background-size: 100% 100%
+
+
+.info-slider-btn-prev::before 
+  background-image: url('../img/production/prev.png')
+
+
+.info-slider-btn-next::before 
+  background-image: url('../img/production/next.png')

@@ -1,0 +1,175 @@
+.production
+    max-width: 1514px
+    margin-top: 128px
+    &-header
+        font-size: 40px
+        font-weight: 700
+        color: #ffffff
+    &-main
+        margin-top: 80px
+        width: 100%
+        display: flex
+        justify-content: space-between
+        align-items: center
+        &-con
+            width: 1314px
+            display: flex
+            justify-content: space-between
+        &-sliderbtn
+            width: 28px
+            height: 56px
+            &-next
+                background: url('../img/production/next.png') center no-repeat
+            &-prev
+                background: url('../img/production/prev.png') center no-repeat
+        &-b
+            width: 418px
+            height: 410px
+            border-radius: 28px
+            &-v1
+                background: url('../img/production/production1.png')
+            &-v3
+                background: url('../img/production/production3.png')
+            &-container
+                width: 100%
+                height: 100%
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+            &-controller
+                display: flex
+                flex-direction: row
+                justify-content: space-between    
+        &-v
+            width: 194px
+            height: 190px
+            border-radius: 28px
+            &-b1
+                background: url('../img/production/production2v1.png')
+            &-b2
+                background: url('../img/production/production2v2.png')
+            &-b3
+                background: url('../img/production/production2v3.png')
+            &-b4
+                background: url('../img/production/production2v4.png')
+.container 
+    margin-top: 80px
+
+
+.itc-slider 
+    position: relative
+    max-width: 1313px
+    margin: 0 auto
+
+
+.itc-slider-wrapper 
+    overflow: hidden
+
+
+.itc-slider-items 
+    display: flex
+    justify-content: space-between
+    transition: transform 0.5s ease
+    will-change: transform
+    counter-reset: slide
+    --gap: 29px
+    gap: var(--gap)
+
+
+.itc-slider-transition-none 
+    transition: none
+
+
+.itc-slider-item 
+    max-width: 100%
+    user-select: none
+    will-change: transform
+    flex: 0 0 auto
+    width: 418px
+    counter-increment: slide
+    height: 410px
+    position: relative
+    border-radius: 28px
+
+@media (min-width: 768px) 
+    .itc-slider-item 
+        width: calc(50% - var(--gap) / 2)
+         
+@media (min-width: 992px) 
+    .itc-slider-item 
+        width: calc(33.3333333333% - var(--gap) * 2 / 3)
+    
+.itc-slider-item::before 
+    position: absolute
+    top: 10px
+    right: 20px
+    display: block
+.itc-slider-item:nth-child(1) 
+    background: url('../img/production/production1.png')
+        
+    
+.itc-slider-item:nth-child(3) 
+    background: url('../img/production/production3.png')
+        
+    
+.itc-slider-item:nth-child(4) 
+    background-color: #25292C
+             
+         
+
+
+.itc-slider-btn
+    margin: 0 -100px
+    position: absolute
+    top: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 35px
+    height: 65px
+    text-align: center
+    background: transparent no-repeat center center
+    border: none
+    transform: translateY(-50%)
+    cursor: pointer
+
+
+.itc-slider-btn-hide 
+  display: none
+
+
+.itc-slider-btn-prev
+    left: 0
+
+
+.itc-slider-btn-next 
+    right: 0
+
+
+.itc-slider-btn:hover,
+.itc-slider-btn:focus 
+  text-decoration: none
+  background: rgb(0 0 0 / 30%)
+  outline: 0
+
+
+.itc-slider-btn::before 
+  content: ""
+  display: inline-block
+  width: 28px
+  height: 56px
+  background: transparent no-repeat center center
+  background-size: 100% 100%
+
+
+.itc-slider-btn-prev::before 
+  background-image: url('../img/production/prev.png')
+
+
+.itc-slider-btn-next::before 
+  background-image: url('../img/production/next.png')
+             
+            
+
+
+
