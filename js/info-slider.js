@@ -39,22 +39,22 @@ class infoSlider {
      */
     constructor(el, config = {}, prefix = 'info-slider-') {
       this.#state = {
-        prefix, // префикс для классов
-        el, // элемент который нужно активировать как infoSlider
-        elWrapper: el.querySelector(`.${prefix}${this.constructor.#EL_WRAPPER}`), // элемент с #CLASS_WRAPPER
-        elItems: el.querySelector(`.${prefix}${this.constructor.#EL_ITEMS}`), // элемент, в котором находятся слайды
-        elListItem: el.querySelectorAll(`.${prefix}${this.constructor.#EL_ITEM}`), // список элементов, являющиеся слайдами
-        btnPrev: el.querySelector(`.${prefix}${this.constructor.#BTN_PREV}`), // кнопка, для перехода к предыдущему слайду
-        btnNext: el.querySelector(`.${prefix}${this.constructor.#BTN_NEXT}`), // кнопка, для перехода к следующему слайду
-        btnClassHide: prefix + this.constructor.#BTN_HIDE, // класс для скрытия кнопки
+        prefix,
+        el,
+        elWrapper: el.querySelector(`.${prefix}${this.constructor.#EL_WRAPPER}`),
+        elItems: el.querySelector(`.${prefix}${this.constructor.#EL_ITEMS}`), 
+        elListItem: el.querySelectorAll(`.${prefix}${this.constructor.#EL_ITEM}`), 
+        btnPrev: el.querySelector(`.${prefix}${this.constructor.#BTN_PREV}`), 
+        btnNext: el.querySelector(`.${prefix}${this.constructor.#BTN_NEXT}`), 
+        btnClassHide: prefix + this.constructor.#BTN_HIDE,
         exOrderMin: 0,
         exOrderMax: 0,
         exItemMin: null,
         exItemMax: null,
         exTranslateMin: 0,
         exTranslateMax: 0,
-        direction: 'next', // направление смены слайдов
-        intervalId: null, // id таймера
+        direction: 'next', 
+        intervalId: null, 
         isSwiping: false,
         swipeX: 0,
         swipeY: 0,
@@ -97,7 +97,7 @@ class infoSlider {
       return slider;
     }
   
-    // статический метод для активирования элементов как infoSlider на основе data-атрибутов
+    
     static createInstances() {
       document.querySelectorAll('[data-slider="info-slider"]').forEach((el) => {
         const { dataset } = el;
@@ -134,20 +134,6 @@ class infoSlider {
       this.#reset();
     }
   
-    get autoplay() {
-      return {
-        // Start autoplay
-        start: () => {
-          this.#config.autoplay = true;
-          this.#autoplay();
-        },
-        // Stop autoplay
-        stop: () => {
-          this.#autoplay('stop');
-          this.#config.autoplay = false;
-        }
-      };
-    }
   
     dispose() {
       this.#detachEvents();
