@@ -160,11 +160,11 @@ body {
   padding-top: 170px;
   display: flex;
   justify-content: space-between;
-  width: 300px;
+  max-width: 300px;
   height: 72px;
 }
 .wrap-block1-bottom {
-  width: 67px;
+  max-width: 67px;
   height: 27px;
   margin-left: 90px;
   margin-top: 30px;
@@ -246,7 +246,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  right: 27px;
+  right: 20px;
 }
 .social-but {
   width: 48px;
@@ -304,7 +304,7 @@ body {
   margin-top: 100px;
 }
 .features-block1 {
-  width: 1314px;
+  max-width: 1314px;
   height: 600px;
   background: url("../img/features-block1.png") right no-repeat;
   background-color: #25292C;
@@ -341,7 +341,7 @@ body {
 }
 .features-block2 {
   margin-top: 30px;
-  width: 1314px;
+  max-width: 1314px;
   height: 780px;
   background: url("../img/features-block2.png") center bottom no-repeat;
   background-color: #25292C;
@@ -384,7 +384,7 @@ body {
 }
 .features-block3 {
   margin-top: 30px;
-  width: 1314px;
+  max-width: 1314px;
   height: 600px;
   background: url("../img/features-block3.png") center left no-repeat;
   background-color: #25292C;
@@ -408,9 +408,10 @@ body {
   font-size: 16px;
   color: #CBCECF;
   font-weight: 400;
+  line-height: 27.2px;
 }
 .features-block3-main-button {
-  width: 155px;
+  max-width: 155px;
   font-size: 16px;
   font-weight: 550;
   text-transform: uppercase;
@@ -421,7 +422,7 @@ body {
   color: #CBCECF;
 }
 .features-block4 {
-  width: 1314px;
+  max-width: 1314px;
   margin-top: 30px;
   display: flex;
   justify-content: space-between;
@@ -458,7 +459,7 @@ body {
 }
 .features-b2 {
   display: flex;
-  width: 754px;
+  max-width: 754px;
   height: 376px;
   background: url("../img/b2.png") bottom right no-repeat;
   background-color: #25292C;
@@ -476,7 +477,7 @@ body {
 .features-b3 {
   display: flex;
   flex-direction: column;
-  width: 754px;
+  max-width: 754px;
   height: 376px;
   border-radius: 28px;
   margin-top: 30px;
@@ -484,7 +485,7 @@ body {
 }
 .features-b3-more {
   align-self: end;
-  width: 100px;
+  max-width: 100px;
   font-size: 16px;
   text-align: right;
   margin-top: 48px;
@@ -535,7 +536,7 @@ ul.dashed > li:before {
 }
 
 table {
-  width: 270px;
+  max-width: 270px;
 }
 
 .table-tr {
@@ -598,7 +599,7 @@ table {
   opacity: 0;
 }
 .item-content-b0 {
-  width: 418px;
+  max-width: 418px;
   height: 595px;
   background-color: #F5F5F5;
   border-radius: 35px;
@@ -609,7 +610,7 @@ table {
   text-align: left;
 }
 .item-content-b0-head {
-  width: 320px;
+  width: 80%;
   margin-top: 48px;
   font-size: 18px;
   color: #1B1F22;
@@ -639,7 +640,7 @@ table {
 }
 .item-content-b0-tail {
   margin-top: 24px;
-  width: 320px;
+  width: 80%;
   display: flex;
   justify-content: space-between;
 }
@@ -1318,5 +1319,92 @@ table {
 
 .info-slider-btn-next::before {
   background-image: url("../img/production/next.png");
+}
+
+.stu {
+  width: 100%;
+  color: #0F1214;
+}
+
+.footer {
+  margin-top: 88px;
+  display: flex;
+  justify-content: flex-end;
+  text-align: left;
+  background: url("../img/footer/met.svg") no-repeat left top;
+}
+.footer-column1 {
+  font-size: 15px;
+  margin-right: 89px;
+}
+.footer-column1 p {
+  cursor: pointer;
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+.footer-column1 div {
+  cursor: pointer;
+  color: #7F8589;
+  margin: 16px 0;
+  font-weight: 400;
+}
+.footer-column3 {
+  margin-left: 179px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.footer-phone {
+  cursor: pointer;
+  padding-top: 15px;
+  font-size: 32px;
+  font-weight: 550;
+  color: #ffffff;
+}
+.footer-callback {
+  display: flex;
+  flex-direction: column;
+}
+.footer-callback a {
+  display: flex;
+  margin: 24px 0;
+  font-size: 15px;
+  color: #ffffff;
+  text-decoration: none;
+}
+.footer-callback div {
+  margin-left: 20px;
+}
+.footer-address {
+  margin-bottom: 32px;
+}
+.footer-address p {
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
+}
+.footer-address div {
+  font-size: 15px;
+  line-height: 22.5px;
+  color: #7F8589;
+}
+
+.foot {
+  margin-top: 113px;
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.foot div {
+  font-size: 15px;
+  color: #7F8589;
+}
+
+.foot a {
+  text-decoration: none;
+  font-size: 15px;
+  color: #7F8589;
 }
 /*# sourceMappingURL=style.css.map */
