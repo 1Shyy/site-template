@@ -122,12 +122,44 @@
                 font-size: 12px
                 color: #CBCECF
 .social
-    position: fixed
+    position: absolute
     height: 240px
     display: flex
     flex-direction: column
     justify-content: space-between
+    align-items: flex-end
     right: 20px
+    &-main
+        width: 48px
+        display: flex
+        justify-content: space-between
+        border-radius: 51px
+        background-color: #313538
+        align-items: center
+        z-index: 10
+    &-main:hover
+        width: 192px
+        .social-text
+            display: block
+        
+    &-b1:hover
+        .social-tele
+            background-color: #259CD8
+    &-b2:hover
+        .social-whatsup
+            background-color: #25CB63
+    &-b3:hover
+        .social-email
+            background-color: #FF3E41
+    &-b4:hover
+        .social-mail
+            background-color: #d4cd03
+    &-text
+        margin-left: 30px
+        display: none
+        font-size: 16px
+        font-weight: 550
+        color: #CBCECF
     &-but
         width: 48px
         height: 48px
@@ -137,11 +169,8 @@
         background: url('../img/telegram.svg') center no-repeat
         background-color: #313538
     &-whatsup
-        background: url('../img/whatsup1.svg') center no-repeat
+        background: url('../img/whatsapp.svg') center no-repeat
         background-color: #313538
-        &-second
-            background: url('../img/whatsup2.svg') center no-repeat
-
     &-email
         background: url('../img/email.svg') center no-repeat
         background-color: #313538
