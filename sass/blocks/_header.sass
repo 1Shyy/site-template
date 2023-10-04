@@ -6,7 +6,7 @@
         margin-top: 72px
         display: flex
         justify-content: space-between
-        width: 75%
+        width: 100%
         margin-left: auto
         margin-right: auto
     &-text
@@ -14,6 +14,17 @@
         font-size: 32px
         text-align: left
         font-weight: 700
+    &-texth
+        font-size: 32px
+        text-align: left
+        font-weight: 700
+        color: #CBCECF
+    &-text-mob
+        margin-top: -25px
+        display: none
+        font-size: 18px
+        font-weight: 700
+        color: #CBCECF
     &-videoplay
         padding-top: 25px
     &-container
@@ -24,7 +35,7 @@
         justify-content: space-between
     &-block1
         &-upper
-            width: 491px
+            width: 200%
             height: 500px
             background-image: url('../img/block2.png')
             background-repeat: no-repeat
@@ -75,6 +86,8 @@
             color: white
             line-height: 90px
             text-align: right
+        &-upper p
+            margin-bottom: 0
         &-hlines:before
             content: " "
             display: block
@@ -102,18 +115,7 @@
                 height: 64px
                 margin-left: auto
                 margin-right: auto
-                background: url('../img/log1.svg') center
-            &-log2
-                width: 65px
-                height: 64px
-                background: url('../img/log2.svg') no-repeat
-                background-position: 40% 50%
-            &-log3
-                &-log1
-                width: 65px
-                height: 64px
-                background: url('../img/log3.svg') no-repeat
-                background-position: 78% 50%
+                background: url('../img/log1.svg') center no-repeat
             &-text1
                 font-size: 18px
                 color: #CBCECF
@@ -136,7 +138,6 @@
         border-radius: 51px
         background-color: #313538
         align-items: center
-        z-index: 10
     &-main:hover
         width: 192px
         .social-text
@@ -184,6 +185,7 @@
     display: flex
     justify-content: space-between
     width: 252px
+    z-index: 100
 .page a
     +bold
     font-size: 13px
@@ -191,5 +193,85 @@
     text-decoration: none
 .page-current a
     color: #FF3E41
+
+@media (max-width: 1400px)
+    .wrap-block1-upper
+        width: 150%
+@media (max-width: 1200px)
+    header
+        max-width: 1000px
+    .hlines
+        font-size: 60px
+    .wrap-block3-hlines:before
+        width: 30px
+@media ( max-width: 1100px)
+    .social
+        display: none
+    .page 
+        display: none
+@media (max-width: 1000px)
+    .wrap
+        margin-top: -100px
+    .wrap-container
+        width: 100%
+        flex-direction: column-reverse
+        justify-content: center
+    .wrap-block2
+        margin-left: 30px
+            
+    .wrap-block1-button
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            margin: 0
+    .wrap-block1-upper
+        background-image: none
+    .wrap-block1-circle,
+    .wrap-block3-upper
+        display: none
+    .wrap-text-mob
+        display: flex
+    .wrap-block1
+        margin: -120px auto 0
+    .wrap-block1-upper
+        width: auto
+        height: auto
+    .wrap-block1-bottom
+        margin-left: auto
+        margin-right: auto
+@media (max-width: 768px)
+    .wrap-head
+        align-items: center
+    .wrap-text
+        font-size: 35px
+    .wrap-texth
+        font-size: 18px
+        line-height: 28px
+    .wrap-videoplay
+        padding: 0
+@media ( max-width: 512px )
+    .wrap-block2
+        margin-top: 0
+    .wrap img
+        width: 70%
+    .wrap-videoplay img
+        width: 71.5px
+        height: 67.8
+    .wrap-block3-bottom-log1
+        background-size: 34px 34px
+    .wrap-block3-bottom
+        width: 60px
+        height: 55px
+    .wrap-block3-bottom-text1
+        font-size: 9px
+    .wrap-block3-bottom-text2
+        font-size: 6px
+    
+    
+
+    
+
+    
+        
 
         
