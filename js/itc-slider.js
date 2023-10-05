@@ -33,11 +33,7 @@ class ItcSlider {
   #config;
   #state;
 
-  /**
-   * @param {HTMLElement} el
-   * @param {Object} config
-   * @param {String} prefix
-   */
+  
   constructor(el, config = {}, prefix = 'itc-slider-') {
     this.#state = {
       prefix, 
@@ -69,11 +65,7 @@ class ItcSlider {
     this.#attachEvents();
   }
 
-  /**
-   * Статический метод, который возвращает экземпляр ItcSlider, связанный с DOM-элементом
-   * @param {HTMLElement} elSlider
-   * @returns {?ItcSlider}
-   */
+ 
   static getInstance(elSlider) {
     const found = this.#instances.find((el) => el.target === elSlider);
     if (found) {
@@ -82,11 +74,7 @@ class ItcSlider {
     return null;
   }
 
-  /**
-   * @param {String|HTMLElement} target
-   * @param {Object} config
-   * @param {String} prefix
-   */
+  
   static getOrCreateInstance(target, config = {}, prefix = 'itc-slider-') {
     const elSlider = typeof target === 'string' ? document.querySelector(target) : target;
     const result = this.getInstance(elSlider);
@@ -136,26 +124,7 @@ class ItcSlider {
   }
 
 
-  dispose() {
-    this.#detachEvents();
-    const transitionNoneClass = this.#state.prefix + this.constructor.#TRANSITION_NONE;
-    const activeClass = this.#state.prefix + this.constructor.#EL_ITEM_ACTIVE;
-    this.#autoplay('stop');
-    this.#state.elItems.classList.add(transitionNoneClass);
-    this.#state.elItems.style.transform = '';
-    this.#state.elListItem.forEach((el) => {
-      el.style.transform = '';
-      el.classList.remove(activeClass);
-    });
-    const selIndicators = `${this.#state.prefix}${this.constructor.#EL_INDICATOR_ACTIVE}`;
-    document.querySelectorAll(`.${selIndicators}`).forEach((el) => {
-      el.classList.remove(selIndicators);
-    });
-    this.#state.elItems.offsetHeight;
-    this.#state.elItems.classList.remove(transitionNoneClass);
-    const index = this.constructor.#instances.findIndex((el) => el.target === this.#state.el);
-    this.constructor.#instances.splice(index, 1);
-  }
+  
 
   #onClick(e) {
     if (this.#state.isMoving) {
@@ -473,21 +442,13 @@ class ItcSlider {
 
   // приватный метод для выполнения первичной инициализации
   #init() {
-    // состояние элементов
     this.#state.els = [];
-    // текущее значение translate
     this.#state.translate = 0;
-    // позиции активных элементов
     this.#state.activeItems = [];
-    // состояние элементов
     this.#state.isBalancing = false;
-    // получаем gap между слайдами
     const gap = parseFloat(getComputedStyle(this.#state.elItems).gap) || 0;
-    // ширина одного слайда
     this.#state.width = this.#state.elListItem[0].getBoundingClientRect().width + gap;
-    // ширина #EL_WRAPPER
     const widthWrapper = this.#state.elWrapper.getBoundingClientRect().width;
-    // количество активных элементов
     this.#state.countActiveItems = Math.round(widthWrapper / this.#state.width);
     this.#state.elListItem.forEach((el, index) => {
       el.style.transform = '';
@@ -512,9 +473,7 @@ class ItcSlider {
 
   #reset() {
     const transitionNoneClass = this.#state.prefix + this.constructor.#TRANSITION_NONE;
-    // получаем gap между слайдами
     const gap = parseFloat(getComputedStyle(this.#state.elItems).gap) || 0;
-    // ширина одного слайда
     const widthItem = this.#state.elListItem[0].getBoundingClientRect().width + gap;
     const widthWrapper = this.#state.elWrapper.getBoundingClientRect().width;
     const countActiveEls = Math.round(widthWrapper / widthItem);

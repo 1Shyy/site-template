@@ -32,11 +32,6 @@ class contentSlider {
     #config;
     #state;
   
-    /**
-     * @param {HTMLElement} el
-     * @param {Object} config
-     * @param {String} prefix
-     */
     constructor(el, config = {}, prefix = 'content-slider-') {
       this.#state = {
         prefix,
@@ -68,11 +63,6 @@ class contentSlider {
       this.#attachEvents();
     }
   
-    /**
-     * Статический метод, который возвращает экземпляр contentSlider, связанный с DOM-элементом
-     * @param {HTMLElement} elSlider
-     * @returns {?contentSlider}
-     */
     static getInstance(elSlider) {
       const found = this.#instances.find((el) => el.target === elSlider);
       if (found) {
@@ -81,11 +71,6 @@ class contentSlider {
       return null;
     }
   
-    /**
-     * @param {String|HTMLElement} target
-     * @param {Object} config
-     * @param {String} prefix
-     */
     static getOrCreateInstance(target, config = {}, prefix = 'content-slider-') {
       const elSlider = typeof target === 'string' ? document.querySelector(target) : target;
       const result = this.getInstance(elSlider);
@@ -470,23 +455,14 @@ class contentSlider {
       }
     }
   
-    // приватный метод для выполнения первичной инициализации
     #init() {
-      // состояние элементов
       this.#state.els = [];
-      // текущее значение translate
       this.#state.translate = 0;
-      // позиции активных элементов
       this.#state.activeItems = [];
-      // состояние элементов
       this.#state.isBalancing = false;
-      // получаем gap между слайдами
       const gap = parseFloat(getComputedStyle(this.#state.elItems).gap) || 0;
-      // ширина одного слайда
       this.#state.width = this.#state.elListItem[0].getBoundingClientRect().width + gap;
-      // ширина #EL_WRAPPER
       const widthWrapper = this.#state.elWrapper.getBoundingClientRect().width;
-      // количество активных элементов
       this.#state.countActiveItems = Math.round(widthWrapper / this.#state.width);
       this.#state.elListItem.forEach((el, index) => {
         el.style.transform = '';
@@ -511,9 +487,7 @@ class contentSlider {
   
     #reset() {
       const transitionNoneClass = this.#state.prefix + this.constructor.#TRANSITION_NONE;
-      // получаем gap между слайдами
       const gap = parseFloat(getComputedStyle(this.#state.elItems).gap) || 0;
-      // ширина одного слайда
       const widthItem = this.#state.elListItem[0].getBoundingClientRect().width + gap;
       const widthWrapper = this.#state.elWrapper.getBoundingClientRect().width;
       const countActiveEls = Math.round(widthWrapper / widthItem);
