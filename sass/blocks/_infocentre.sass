@@ -77,27 +77,31 @@
         background: url('../img/infocenter/infocenter-3.png')
         background-size: 100% 100%
     &-main
-        width: 358px
-        margin: 32px auto 0
+        width: 90%
+        height: 249px
+        margin: 0 auto
         text-align: left
+        display: flex
+        flex-direction: column
+        justify-content: space-between
         &-header
+            margin-top: 32px
             font-size: 14px
             font-weight: 550
             color: #FF3E41
         &-bd
-            height: 80px
             margin-top: 24px
             max-width: 330px
             font-size: 20px
             font-weight: 550
             color: #1F2120
         &-tail
-            margin-top: 55px
             display: flex
             justify-content: space-between
             font-size: 14px
             font-weight: 550
             color: #7F8589
+            margin-bottom: 24px
             &-arrow
                 width: 28px
                 height: 28px
@@ -179,3 +183,18 @@
 
 .info-slider-btn-next::before 
   background-image: url('../img/production/next.png')
+
+@media (max-width: 1500px)
+    .info-slider-btn
+        margin: 0 -40px
+@media (max-width: 1200px)
+    .info-slider-item-main-bd
+@media (max-width: 768px)
+    .info-slider-btn
+        margin: 0 -30px
+    .info-slider-btn::before
+        width: 21px
+        height: 42px
+@media (max-width: 512px)
+    .info-slider-btn
+        margin: 0

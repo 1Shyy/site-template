@@ -23,8 +23,6 @@
     color: #7F8589
     &-content
         max-width: 1314px
-        display: flex
-        justify-content: space-between
         height: 0
         transition: .4s
         opacity: 0
@@ -113,7 +111,7 @@
     opacity: 1
 .content-slider
     position: relative
-    max-width: 1313px
+    max-width: 1314px
     margin: 0 auto
 
 
@@ -265,3 +263,18 @@
 
 .content-slider-btn-next::before 
   background-image: url('../img/production/next.png')
+
+@media (max-width: 1500px)
+    .content-slider-btn
+        margin: 0 -40px
+@media (max-width: 768px)
+    .content-slider-btn
+        margin: 0 -30px
+    .content-slider-btn::before
+        width: 21px
+        height: 42px
+@media (max-width: 512px)
+    .content-slider-btn
+        margin: 0
+    .showcase
+        height: 1116px
