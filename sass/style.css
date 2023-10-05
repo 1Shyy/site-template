@@ -1980,6 +1980,10 @@ table {
   text-align: left;
   background: url("../img/footer/met.svg") no-repeat left top;
 }
+.footer-column {
+  display: flex;
+  justify-content: space-between;
+}
 .footer-column1 {
   font-size: 15px;
   margin-right: 89px;
@@ -2058,6 +2062,48 @@ table {
 @media (max-width: 1200px) {
   .footer-column3 {
     margin-left: 0;
+  }
+}
+@media (max-width: 1000px) {
+  .footer {
+    padding-top: 100px;
+  }
+}
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column-reverse;
+  }
+}
+@media (max-width: 512px) {
+  .footer-phone {
+    font-size: 20px;
+  }
+  .footer-callback a {
+    font-size: 14px;
+  }
+  .footer-address {
+    margin-bottom: 10px;
+  }
+  .footer-address p {
+    font-size: 12px;
+  }
+  .footer-address div {
+    font-size: 11px;
+  }
+  .footer-address br {
+    display: none;
+  }
+  .footer-column1 p {
+    font-size: 12px;
+  }
+  .footer-column1 div {
+    font-size: 11px;
+  }
+  .foot {
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
   }
 }
 /*# sourceMappingURL=style.css.map */
