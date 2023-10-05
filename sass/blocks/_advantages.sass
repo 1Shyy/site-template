@@ -81,13 +81,14 @@
                 font-weight: 550
                 color: white
             &-table table
+                max-width: 549px
                 margin: 58px auto 0
-                width: 550px
+                width: 85%
                 display: table
             &-table div
                 display: inline-block
                 margin: 30px 0
-                width: 165px
+                width: 100%
                 height: 44px
             &-allclients
                 margin-top: 10px
@@ -176,6 +177,44 @@
     background: url('../img/advantages/volkswagen.png') center no-repeat
 .l22
     background: url('../img/advantages/severstal.png') center no-repeat
+
+@media (max-width: 1000px)
+    .advantages-main-upper-t1
+        font-size: 150px
+@media (max-width: 768px)
+    .advantages-main-upper
+        display: flex
+        flex-direction: column
+    .advantages-main-upper-b1,
+    .advantages-main-upper-b2
+        width: 100%
+        margin-bottom: 24px
+    .advantages-main-bottom
+        margin: 0
+        flex-direction: column
+    .advantages-main-bottom-b1
+        width: 100%
+        margin-bottom: 24px
+@media (max-width: 512px)
+    .advantages-main-upper-b1
+        height: 500px
+    .advantages-main-upper-t1
+        font-size: 100px
+    .advantages-main-upper-t2
+        font-size: 20px
+    .advantages-main-upper-i1
+        margin-top: 10px
+        width: 85%
+    .advantages-main-upper-i2
+        font-size: 12px
+        width: 85%
+        margin-top: 10px
+    .advabtages-main-upper-v1
+        font-size: 12px
+    .advantages-main-upper-i3
+        margin-top: 22px
+        width: 85%
+
 
 
                 

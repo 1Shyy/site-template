@@ -54,7 +54,9 @@
                 background: url('../img/production/production2v3.png')
             &-b4
                 background: url('../img/production/production2v4.png')
-.container 
+.container
+    margin-left: auto
+    margin-right: auto
     margin-top: 80px
 
 
@@ -97,8 +99,11 @@
         width: calc(50% - var(--gap) / 2)
          
 @media (min-width: 992px) 
-    .itc-slider-item 
+    .itc-slider-item
         width: calc(33.3333333333% - var(--gap) * 2 / 3)
+@media (max-width: 768px) 
+    .itc-slider-item
+        width: 100%
     
 .itc-slider-item::before 
     position: absolute
